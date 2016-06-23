@@ -156,6 +156,8 @@
 		D0E2F08E1B16664200ED903B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Pajama Donkey";
 				TargetAttributes = {
@@ -409,6 +411,7 @@
 				D0E2F0B71B16664200ED903B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0E2F0B81B16664200ED903B /* Build configuration list for PBXNativeTarget "draggingTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +420,7 @@
 				D0E2F0BA1B16664200ED903B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
