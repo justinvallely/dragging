@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         self.view.addSubview(label)
         
         // Add gesture recognizer
-        let gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:"))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.wasDragged(_:)))
         label.addGestureRecognizer(gesture)
         
         // Manually tell xcode that we want to make the label interactive since it's not a button or something normally interactive
