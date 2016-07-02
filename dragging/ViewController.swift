@@ -17,13 +17,13 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // Generate UI element with code instead of on the main storyboard
-        var label:UILabel = UILabel(frame: CGRectMake(self.view.bounds.width / 2 - 100, self.view.bounds.height / 2 - 50, 200, 100))
+        let label:UILabel = UILabel(frame: CGRectMake(self.view.bounds.width / 2 - 100, self.view.bounds.height / 2 - 50, 200, 100))
         label.text = "Drag Me!"
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
         
         // Add gesture recognizer
-        var gesture = UIPanGestureRecognizer(target: self, action: Selector("wasDragged:"))
+        let gesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.wasDragged(_:)))
         label.addGestureRecognizer(gesture)
         
         // Manually tell xcode that we want to make the label interactive since it's not a button or something normally interactive
@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         let translation = gesture.translationInView(self.view)
         
         // Get the thing in the gesture (label above)
-        var label = gesture.view!
+        let label = gesture.view!
         
         // Keep track of how far the object is from center
         xFromCenter += translation.x
@@ -65,11 +65,11 @@ class ViewController: UIViewController {
         // Look for left and right bounds
         if label.center.x < 100 {
             
-            println("Left Bounds")
+            print("Left Bounds")
             
         } else if label.center.x > self.view.bounds.width - 100 {
             
-            println("Right Bounds")
+            print("Right Bounds")
         }
         
         // Look for the user to let go
